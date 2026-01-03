@@ -1,5 +1,7 @@
-export default function Card({ politician }) {
+import { memo } from "react";
+const card = memo(function Card({ politician }) {
   const { name, image, position, biography } = politician;
+  console.log("card of", name, "rendered at", new Date().toLocaleTimeString());
 
   return (
     <div className="card">
@@ -9,4 +11,5 @@ export default function Card({ politician }) {
       <p>{biography}</p>
     </div>
   );
-}
+});
+export default card;
