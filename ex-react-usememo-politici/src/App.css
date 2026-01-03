@@ -1,0 +1,12 @@
+.card-image {
+  max-width: -webkit-fill-available;
+}
+.card {
+  width: 400px;
+}
+.card-grid {
+  display: flex;
+  gap: 40px;
+  flex-flow: row wrap;
+  justify-content: start;
+}

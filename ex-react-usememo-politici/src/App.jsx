@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-
+import Card from "./components/card";
+import "./App.css";
 function App() {
   const [politicians, setPoliticians] = useState([]);
   useEffect(() => {
@@ -11,7 +12,10 @@ function App() {
   return (
     <>
       <h1>Lista di politici</h1>
-      {politicians.length > 0 && politicians.map((p, i) => <card {...p} />)}
+      <div className="card-grid">
+        {politicians.length > 0 &&
+          politicians.map((p) => <Card politician={p} />)}
+      </div>
     </>
   );
 }
