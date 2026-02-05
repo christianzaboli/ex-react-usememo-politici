@@ -1,5 +1,5 @@
 import { memo } from "react";
-const card = memo(function Card({ politician }) {
+const card = memo(({ politician }) => {
   const { name, image, position, biography } = politician;
   console.log("card of", name, "rendered at", new Date().toLocaleTimeString());
 
